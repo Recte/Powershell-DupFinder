@@ -1,5 +1,9 @@
+<#  Find Duplicate
+	Just a small and simple POC Powershell script that searches for duplicate files, comparing their file hashes.
+#>
+
 $Paths=@("$($Env:USERPROFILE)\Documents", "\\NAS\Documents")
-$Alg="sha256"
+$Alg="SHA256"
  
 ForEach ($Path in $Paths) {
    Write-Host "Indexing '$Path'"
